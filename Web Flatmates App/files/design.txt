@@ -1,0 +1,19 @@
+This file contains the design for this program
+
+Title:  FLATMATES BILL APP
+
+Description:    Programs takes input from two flatmates of how long have they stayed in a flat from which time or date. Then it creates a total bill and
+tells that how much each has to pay depending on the number of days they have stayed in the flat. Moreover, it also generates a PDF report that includes
+total bill and amount for each flatmate.
+
+Objects:
+        Bill:
+            amount
+            period
+        Flatmate:
+            name
+            days_in_house
+            pays(bill, flatmate2)
+        PdfReport:
+            filename
+            generate(flatmate1, flatmate2, bill)

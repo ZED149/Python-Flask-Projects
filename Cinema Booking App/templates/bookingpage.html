@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bookingpage.css')}}">
+    <title>Title</title>
+</head>
+<body>
+    <h1>I am booking page</h1>
+    <table>
+        <tr>
+            <th>SEAT ID</th>
+            <th>PRICE</th>
+          </tr>
+        {% for seat_id, price in content %}
+          <tr>
+            <td>{{seat_id}}</td>
+            <td>{{price}}</td>
+          </tr>
+        {% endfor %}
+    </table>
+    <form action="{{url_for('details_page')}}" method="post">
+        <label for="seat_id">Seat ID: </label>
+        <input type="text" name="seat_id" id="seat_id" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

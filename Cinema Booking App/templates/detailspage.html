@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>I am design page</h1>
+
+    <form method="post" action="{{url_for('success_page')}}">
+        <h2>Enter user details</h2>
+        <label for="user_name">User Name: </label>
+        <input type="text" name="user_name" id="user_name" required>
+        <br>
+        <label for="user_email">User Email: </label>
+        <input type="email" name="user_email" id="user_email" required>
+        <br>
+        <h2>Enter card details</h2>
+        <label for="card_type">Card Type: </label>
+        <input type="text" name="card_type" id="card_type" value="Visa" required>
+        <br>
+        <label for="holder_name">Holder Name: </label>
+        <input type="text" name="holder_name" id="holder_name" value="John Smith" required>
+        <br>
+        <label for="card_number">Card Number: </label>
+        <input type="number" name="card_number" id="card_number" value="12345678" required>
+        <br>
+        <label for="cvc">CVC: </label>
+        <input type="number" name="cvc" id="cvc" value="123" required>
+        <br>
+        <label for="seat_id">Seat ID: </label>
+        <input type="text" name="seat_id" id="seat_id" value="{{seatid}}" readonly>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

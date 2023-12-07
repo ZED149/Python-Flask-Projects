@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Form Page</title>
+</head>
+<body>
+<h1>This is the bill form page</h1>
+<h3>Enter details below</h3>
+
+<form action={{url_for("bill_form_page")}} method="post">
+    {{billform.amount.label}} {{billform.amount}}
+    <br>
+    {{billform.period.label}} {{billform.period}}
+    <hr>
+    <h4>Please provide flatmates information</h4>
+    {{billform.flatmate1.label}} {{billform.flatmate1}}
+    {{billform.flatmate2.label}} {{billform.flatmate2}}
+    <hr>
+    {{billform.days_in_house1.label}} {{billform.days_in_house1}}
+    {{billform.days_in_house2.label}} {{billform.days_in_house2}}
+    <br>
+    {{billform.button}}
+    {% if result %}
+    <h1>Results are as follow: </h1>
+    {{name1}} pays {{amount1}}
+    <br>
+    {{name2}} pays {{amount2}}
+    {% endif %}
+</form>
+</body>
+</html>
