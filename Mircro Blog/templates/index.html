@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Micro Blog</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../static/css/styles.css" />
 </head>
 <body>
     <header class="navbar">
         <div class="navbar__brand">
-            <img class="navbar__logo" src="logo.svg" alt="The Microblog Logo"/>Microblog
+            <img class="navbar__logo" src="/static/logo.svg" alt="The Microblog Logo"/>ZED Blog
         </div>
         <ul class="navbar__navigation">
             <li class="navbar__navigation-item">
@@ -23,7 +23,7 @@
     <main class="main">
         <section>
             <h1>Add new Entry in here</h1>
-            <form class="form" method="POST" action="/entry">
+            <form class="form" method="POST" action="/">
                 <p class="form__input">
                     <label class="form__label" for="entry">Entry Contents:</label>
                     <textarea class="form__textarea" name="content" id="entry"></textarea>
@@ -33,19 +33,21 @@
         </section>
         <section>
             <h1>Recent Posts</h1>
+            {% for entry in entries.find() %}
             <article class="entry">
                 <div>
-                    <h2 class="entry__title">A bit of chill day today</h2>
-                    <time class="entry__date" datetime="13-04-2024">• April 24</time>
+                    <h2 class="entry__title">{{entry["content"].upper() | truncate(15, true)}}</h2>
+                    <time class="entry__date" datetime="{{entry['date_datetime']}}">• {{entry["date"]}}</time>
                 </div>
-                <p class="entry__content">Today I could't do much programming, but thats OK! Can't be too awesome every day now!</p>
+                <p class="entry__content">{{entry["content"]}}</p>
             </article>
+            {% endfor %}
         </section>
     </main>
     <footer class="footer">
         <div class="footer__content">
             <section class="left">
-                <a class="footer__item" href="#">Made by Salman Ahmad</a>
+                <a class="footer__item" href="#">Made by <i><strong>Salman Ahmad</strong></i></a>
                 <a class="footer__item" href="#">Check out my other projects</a>
             </section>
             <section class="right">
