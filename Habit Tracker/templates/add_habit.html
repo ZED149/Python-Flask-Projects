@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form class="form" method="POST">
+        <textarea class="form__input" id="habit" name="habit" rows="3" placeholder="Add a new daily Habit"
+        required></textarea>
+        <button type="submit" class="form__button">Add</button>
+    </form>
+{% endblock %}
