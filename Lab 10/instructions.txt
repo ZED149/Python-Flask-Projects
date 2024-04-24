@@ -1,0 +1,31 @@
+Instructions Lab 10
+Review the Application Programming Interfaces (APIs) slides (Attached) before completing the lab.
+
+In this lab, we will create a virtual Python environment in Windows to run a Python client program which uses APIs to access and manipulate the devices in a simulated network environment. Read and follow the instructions in Lab 10: APIs Download Lab 10: APIs.
+
+Repo for the fishnet client: https://github.com/ProfBrauda/CIS3534CMod10-Client
+
+Repo for the fishnet server: https://github.com/ProfBrauda/CIS3534CMod10
+
+Help Files (taken from API slides):
+
+Python Virtual EnvironmentsDownload Python Virtual Environments (Attached)
+Installing Required Packages to Run Flask Download Installing Required Packages to Run FlaskSkip the directions on Slide 1 or you will end up with more recent packages that won't work with your server. (Attached)
+*INSTRUCTOR NOTE: I updated the MOD10 repo so that it has a new requirements.txt file to use to install the necessary packages. Follow the directions in the Lab 10 document; use the slides as a general reference.
+
+Submission
+Take a screenshot of your output from the FishNet-SampleClient.py execution.
+
+
+
+Instructions GPA 10
+Review the Application Programming Interfaces (APIs) slides Download Application Programming Interfaces (APIs) slidesbefore completing the lab.
+
+In this assignment, we will modify Lab 10’s client program to access and manipulate a device in the FishNet simulated network environment. Read and follow the instructions in GPA 10: APIs 
+
+Help Files (taken from API slides):
+
+Python Virtual EnvironmentsDownload Python Virtual Environments (Attached)
+Installing Required Packages to Run Flask. Skip Slide 1; follow the directions in Lab 10 to install the correct version of the packages that will work with the server. (Attached)
+Submission
+Upload your modified client .py file and one or more screenshots of your output.
