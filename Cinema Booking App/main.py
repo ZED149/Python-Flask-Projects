@@ -1,7 +1,7 @@
 
 
+# this is the main() for Cinema Booking Application
 
-# this is the main() for Cinema Booking Appliction
 
 from webapp import homepage
 from webapp import bookingpage
