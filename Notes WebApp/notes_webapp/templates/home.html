@@ -4,5 +4,26 @@
 {% endblock %}
 
 {% block content %}
-    <h1>I am HomePage.</h1>
+    <!-- Displaying all notes -->
+    <h1 align="center">Notes</h1>
+    <ul class="list-group list-group-flush" id="notes">
+        {% for note in user.notes %}
+            <li class="list-group-item"> {{note.data}}
+                <button type="button" class="close" onclick="deleteNote({{note.id}})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Form to get a new note from the user -->
+    <br>
+    <form method="POST">
+        <label for="note">Write your note...</label>
+        <textarea name="note" id="note" class="form-control"></textarea>
+        <br>
+        <div align="center">
+            <button class="btn btn-primary" type="submit">Add Note</button>
+        </div>
+    </form>
 {% endblock %}
