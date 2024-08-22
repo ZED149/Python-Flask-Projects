@@ -3,3 +3,9 @@ ZED Blog/check.py
 
 Habit Tracker/.env
 Habit Tracker/check.py
+
+Flask Project/.idea
+Flask Project/__pychache__
+Flask Project/app/__pychache__
+Flask Project/app/models/__pychache__
+Flask Project/app/routes/__pychache__
